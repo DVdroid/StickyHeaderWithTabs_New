@@ -56,7 +56,7 @@ struct HeaderView: View {
                 .opacity(homeData.offset > 200 ? 1 - Double((homeData.offset - 200) / 50) : 1)
                 
                 //Automatic scrolling
-                ScrollViewReader { reader in
+                ScrollViewReader { proxy in
                     //Custom ScrollView
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 0) {
@@ -65,18 +65,23 @@ struct HeaderView: View {
                                     .font(.caption)
                                     .padding(.vertical, 10)
                                     .padding(.horizontal)
-                                    .background(Color.primary.opacity(homeData.selectedtab == tab.tab ? 1 : 0))
+                                    .background(Color.primary.opacity(homeData.selectedtab == tab.id ? 1 : 0))
                                     .clipShape(Capsule())
                                     .foregroundColor(
-                                        homeData.selectedtab == tab.tab
+                                        homeData.selectedtab == tab.id
                                         ? scheme == .dark ? Color.black : Color.white
                                         : .primary
                                     )
-                                    .id(tab.tab)
+                                    .onTapGesture {
+                                        withAnimation(.easeInOut){
+                                            homeData.onTapCurrentTab = tab.id
+                                            proxy.scrollTo(tab.id, anchor: .center)
+                                        }
+                                    }
                             }
                             .onChange(of: homeData.selectedtab, perform: { value in
                                 withAnimation(.easeOut) {
-                                    reader.scrollTo(homeData.selectedtab, anchor: .leading)
+                                    proxy.scrollTo(homeData.selectedtab, anchor: .center)
                                 }
                             })
                         }

@@ -17,6 +17,7 @@
 		D60977012B0F080300554159 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60977002B0F080200554159 /* HeaderView.swift */; };
 		D60977032B0F0D7200554159 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60977022B0F0D7200554159 /* Tab.swift */; };
 		D60977052B0F124C00554159 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60977042B0F124C00554159 /* HomeViewModel.swift */; };
+		D60977332B10D1B700554159 /* OffsetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60977322B10D1B700554159 /* OffsetModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D60977002B0F080200554159 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D60977022B0F0D7200554159 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		D60977042B0F124C00554159 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D60977322B10D1B700554159 /* OffsetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				D60976FE2B0F037300554159 /* CardView.swift */,
 				D60977002B0F080200554159 /* HeaderView.swift */,
 				D60977022B0F0D7200554159 /* Tab.swift */,
+				D60977322B10D1B700554159 /* OffsetModifier.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				D60976FD2B0EFF4100554159 /* Food.swift in Sources */,
 				D60977052B0F124C00554159 /* HomeViewModel.swift in Sources */,
 				D60976FB2B0EFE5100554159 /* Home.swift in Sources */,
+				D60977332B10D1B700554159 /* OffsetModifier.swift in Sources */,
 				D60976EA2B0EFBDD00554159 /* StickyHeaderWithTabsApp.swift in Sources */,
 				D60976FF2B0F037300554159 /* CardView.swift in Sources */,
 				D60977032B0F0D7200554159 /* Tab.swift in Sources */,
