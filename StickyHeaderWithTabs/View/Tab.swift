@@ -7,12 +7,17 @@
 
 import SwiftUI
 
-struct Tab: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+//Tab model with Tab items...
+
+struct Tab: Identifiable {
+    var id: String = UUID().uuidString
+    var tab: String
+    var foods: [Food]
 }
 
-#Preview {
-    Tab()
-}
+var tabsItems: [Tab] = [
+    .init(tab: "Order again", foods: foods.shuffled()),
+    .init(tab: "Picked For You", foods: foods.shuffled()),
+    .init(tab: "Starters", foods: foods.shuffled()),
+    .init(tab: "Gimpub Sushi", foods: foods.shuffled())
+]

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+final class HomeViewModel: ObservableObject {
+    init(offset: CGFloat = .zero) {
+        self.offset = offset
+    }
+    @Published var offset: CGFloat
+    @Published var selectedtab = tabsItems.first!.tab
+}
